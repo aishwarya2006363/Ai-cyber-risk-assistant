@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #17365d;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.container > p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #17365d;
+    margin: 20px 0 15px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #17365d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #24558b;
+}
+
+/* Dashboard */
+
+.dashboard {
+    margin-top: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    background: #eaf0f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: #17365d;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    color: #444;
+}
+
+/* Results */
+
+#result,
+#recommendation {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f5fa;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+#result:empty,
+#recommendation:empty {
+    display: none;
+}
+
+#result h3,
+#recommendation h3 {
+    color: #17365d;
+    margin-bottom: 8px;
+}
+
+/* History */
+
+hr {
+    margin: 30px 0;
+    border: 1px solid #ddd;
+}
+
+.history-section h2 {
+    margin-bottom: 15px;
+}
+
+.clear-btn {
+    background: #b83232;
+    margin-bottom: 15px;
+}
+
+.clear-btn:hover {
+    background: #922525;
+}
+
+.history-card {
+    background: #f1f5fa;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.history-card h3 {
+    color: #17365d;
+}
+
+.empty-message {
+    color: #666;
+    padding: 12px 0;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 20px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}

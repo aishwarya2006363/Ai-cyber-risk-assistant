@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cyber Risk Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Cyber Risk Assistant</h1>
+        <p>Identify risks and get security control recommendations.</p>
+
+        <!-- Risk Input -->
+        <h2>Risk Assessment</h2>
+
+        <label for="risk">Enter Risk Description</label>
+        <textarea id="risk" placeholder="Example: Weak password policy"></textarea>
+
+        <label for="likelihood">Likelihood (1-5)</label>
+        <input type="number" id="likelihood" min="1" max="5" placeholder="Enter 1 to 5">
+
+        <label for="impact">Impact (1-5)</label>
+        <input type="number" id="impact" min="1" max="5" placeholder="Enter 1 to 5">
+
+        <button onclick="analyzeRisk()">Analyze Risk</button>
+
+        <!-- Risk Dashboard -->
+        <div class="dashboard">
+            <h2>Risk Dashboard</h2>
+
+            <div class="dashboard-grid">
+
+                <div class="stat-card">
+                    <h3 id="totalRisks">0</h3>
+                    <p>Total Risks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="highRisks">0</h3>
+                    <p>High Risks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="mediumRisks">0</h3>
+                    <p>Medium Risks</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="lowRisks">0</h3>
+                    <p>Low Risks</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="result"></div>
+        <div id="recommendation"></div>
+
+        <hr>
+
+        <!-- Risk History -->
+        <div class="history-section">
+
+            <h2>Risk Assessment History</h2>
+
+            <button class="clear-btn" onclick="clearHistory()">
+                Clear History
+            </button>
+
+            <div id="history"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
